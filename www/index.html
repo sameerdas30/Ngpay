@@ -17,11 +17,15 @@
                     sandbox:    'AWi18rxt26-hrueMoPZ0tpGEOJnNT4QkiMQst9pYgaQNAfS1FLFxkxQuiaqRBj1vV5PmgHX_jA_c1ncL',
                     production: '<insert production client id>'
                 },
+				redirect_urls: {
+  return_url: "http://www.paypal.com/return",
+  cancel_url: "http://www.paypal.com/cancel"
+  },
                 payment: function() {
 					console.log('Samir: '+this.props.env);
                     var env    = this.props.env;
                     var client = this.props.client;
-                    return paypal.rest.payment.create(env, client, {
+                    return paypal.rest.payment.create(env,redirect_urls, client, {
                         transactions: [
                             {
                                 amount: { total: '1.00', currency: 'USD' }
