@@ -25,7 +25,8 @@
 					console.log('Samir: '+this.props.env);
                     var env    = this.props.env;
                     var client = this.props.client;
-                    return paypal.rest.payment.create(env,redirect_urls, client, {
+					var redirect_urls = this.props.redirect_urls;
+                    return paypal.rest.payment.create(env, redirect_urls, client, {
                         transactions: [
                             {
                                 amount: { total: '1.00', currency: 'USD' }
