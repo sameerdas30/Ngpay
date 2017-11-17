@@ -8,5 +8,17 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+    <access origin="https://*.bootstrapcdn.com" />
+	<access origin="https://*.cloudflare.com" />
+	<access origin="https://paypalobjects.com/*" />
+  <access origin="https://maxcdn.bootstrapcdn.com/*" />
+  <access origin="https://cdnjs.cloudflare.com/*" />
+  
     <access origin="*" />
+	<!-- A wildcard can be used to whitelist the entire network,
+     over HTTP and HTTPS.
+     *NOT RECOMMENDED* -->
+<allow-navigation href="*" />
+<allow-navigation href="http://*/*" />
+<allow-intent href="https://*/*" />
 </widget>
