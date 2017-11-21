@@ -13,7 +13,8 @@
     <access origin="https://*.bootstrapcdn.com" />
 	<access origin="https://*.cloudflare.com" />
 	<access origin="https://paypalobjects.com/*" />
-	<access origin="https://*.sandbox.paypal.com" />
+	<access origin="https://*.sandbox.paypal.com" /> 
+	<access origin="https://cors.api.sandbox.paypal.com" />
 	<access origin="https://sandbox.paypal.com/*" />
   <access origin="https://maxcdn.bootstrapcdn.com/*" />
   <access origin="https://cdnjs.cloudflare.com/*" />
