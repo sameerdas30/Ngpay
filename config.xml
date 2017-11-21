@@ -7,6 +7,7 @@
     <author email="sameer@webzin.in" href="https://www.webzin.in">
         PhoneGap Team
     </author>
+	<preference name="android-minSdkVersion" value="14" />
 	<gap:plugin name="com.paypal.cordova.mobilesdk" source="npm" />
     <content src="index.html" />
     <access origin="https://*.bootstrapcdn.com" />
