@@ -14,19 +14,15 @@
             $scope.opts = {
                 env: 'sandbox',
                 client: {
-                    sandbox:    'AWi18rxt26-hrueMoPZ0tpGEOJnNT4QkiMQst9pYgaQNAfS1FLFxkxQuiaqRBj1vV5PmgHX_jA_c1ncL',
+                    sandbox:    'AYn8Of5RvKN48hJFY4NJ52XuGuOh4nyOwC2wrbBfQehJWn2grD0LsPNcWAxZJFHagXtck5FUzsIh8QhW',
                     production: 'AUqRNmgrBgsmerGxh9uNEw57GKUCexwBFGX16yoOQGM4xzJmQG5G7f---EYzBH5_eBQ1aH2p4i4mTBha'
                 },
-				redirect_urls: {
-  return_url: "http://www.paypal.com/return",
-  cancel_url: "http://www.paypal.com/cancel"
-  },
                 payment: function() {
 					console.log('Samir: '+this.props.env);
                     var env    = this.props.env;
                     var client = this.props.client;
 					var redirect_urls = this.props.redirect_urls;
-                    return paypal.rest.payment.create(env, redirect_urls, client, {
+                    return paypal.rest.payment.create(env, client, {
                         transactions: [
                             {
                                 amount: { total: '1.00', currency: 'USD' }
